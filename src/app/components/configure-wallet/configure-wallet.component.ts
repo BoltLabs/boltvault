@@ -22,9 +22,9 @@ export class ConfigureWalletComponent implements OnInit {
 
   selectedImportOption = 'seed';
   importOptions = [
-    { name: 'Banano Seed', value: 'seed' },
-    { name: 'Banano Mnemonic Phrase', value: 'mnemonic' },
-    { name: 'BananoVault Wallet File', value: 'file' },
+    { name: 'Bolt Seed', value: 'seed' },
+    { name: 'Bolt Mnemonic Phrase', value: 'mnemonic' },
+    { name: 'BoltVault Wallet File', value: 'file' },
   ];
 
   constructor(private router: ActivatedRoute, private walletService: WalletService, private notifications: NotificationService, private route: Router) { }

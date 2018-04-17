@@ -4,7 +4,7 @@ import {HttpClient} from "@angular/common/http";
 @Injectable()
 export class ApiService {
 
-  rpcUrl = `https://vault.banano.co.in/api/node-api`;
+  rpcUrl = `https://vault.bolt.co.in/api/node-api`;
   // rpcUrl = `http://localhost:9950/api/node-api`;
 
   constructor(private http: HttpClient) { }

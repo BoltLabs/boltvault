@@ -191,7 +191,7 @@ export class WalletService {
     const exportData = this.generateExportData();
     const base64Data = btoa(JSON.stringify(exportData));
 
-    return `https://vault.banano.co.in/import-wallet#${base64Data}`;
+    return `https://vault.bolt.co.in/import-wallet#${base64Data}`;
   }
 
   lockWallet() {
@@ -554,7 +554,7 @@ export class WalletService {
       this.successfulBlocks.push(nextBlock.hash);
 
       const receiveAmount = this.util.nano.rawToBan(nextBlock.amount);
-      this.notifications.sendSuccess(`Successfully received ${receiveAmount.toFixed(6)} BANANO!`);
+      this.notifications.sendSuccess(`Successfully received ${receiveAmount.toFixed(6)} BOLT!`);
 
       // await this.promiseSleep(500); // Give the node a chance to make sure its ready to reload all?
       await this.reloadBalances();

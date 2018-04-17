@@ -64,11 +64,11 @@ export class AppComponent implements OnInit {
       }
     });
 
-    // Listen for an xrb: protocol link, triggered by the desktop application
+    // Listen for an blt: protocol link, triggered by the desktop application
     window.addEventListener('protocol-load', (e: CustomEvent) => {
       const protocolText = e.detail;
-      const stripped = protocolText.split('').splice(4).join(''); // Remove ban:
-      if (stripped.startsWith('ban_')) {
+      const stripped = protocolText.split('').splice(4).join(''); // Remove blt:
+      if (stripped.startsWith('blt_')) {
         this.router.navigate(['account', stripped]);
       }
       // Soon: Load seed, automatic send page?

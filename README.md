@@ -1,13 +1,13 @@
-# BananoVault
+# BoltVault
 
-BananoVault is a fully client-side signing wallet for sending and receiving [Banano](https://github.com/bananocoin/banano)
-on your [desktop](https://github.com/bananocoin/bananovault/releases) or [in your browser](https://vault.banano.co.in)
+BoltVault is a fully client-side signing wallet for sending and receiving [Bolt](https://github.com/boltlabs/boltvault)
+on your [desktop](https://github.com/boltlabs/boltvault/releases) or [in your browser](https://vault.bolt.co.in)
 
-![BananoVault Screenshot](https://i.imgur.com/DWlPQdM.png)
+![BoltVault Screenshot](https://i.imgur.com/DWlPQdM.png)
 ___
 
 # Table of Contents
-* [Install](#install-bananovault)
+* [Install](#install-boltvault)
 * [Bugs/Feedback](#bugsfeedback)
 * [Application Structure](#application-structure)
 * [Development Prerequisites](#development-prerequisites)
@@ -15,22 +15,22 @@ ___
 * [Acknowledgements](#acknowledgements)
 
 
-# Install BananoVault
-BananoVault is available on your desktop (Windows/Mac/Linux) - just head over to the [releases section](https://github.com/bananocoin/bananovault/releases) and download the latest version for your OS.
+# Install BoltVault
+BoltVault is available on your desktop (Windows/Mac/Linux) - just head over to the [releases section](https://github.com/boltlabs/boltvault/releases) and download the latest version for your OS.
 
-You can also use BananoVault from any device on the web at [vault.banano.co.in](https://vault.banano.co.in)
+You can also use BoltVault from any device on the web at [vault.bolt.co.in](https://vault.bolt.co.in)
 
 
 # Bugs/Feedback
-If you run into any issues, please use the [GitHub Issue Tracker](https://github.com/bananocoin/bananovault/issues) or head over to our [Discord Server](https://discord.gg/SBPaSBS)!  
+If you run into any issues, please use the [GitHub Issue Tracker](https://github.com/boltlabs/boltvault/issues) or head over to our [Discord Server](https://discord.gg/SBPaSBS)!  
 We are continually improving and adding new features based on the feedback you provide, so please let your opinions be known!
 
-To get an idea of some of the things that are planned for the near future, check out the [Road Map](https://github.com/bananocoin/bananovault/wiki/Road-Map).
+To get an idea of some of the things that are planned for the near future, check out the [Road Map](https://github.com/boltlabs/boltvault/wiki/Road-Map).
 
 ___
 
-#### Everything below is only for contributing to the development of BananoVault
-#### To download BananoVault go to the [releases section](https://github.com/bananocoin/bananovault/releases), or use the web wallet at [vault.banano.co.in](https://vault.banano.co.in)
+#### Everything below is only for contributing to the development of BoltVault
+#### To download BoltVault go to the [releases section](https://github.com/boltlabs/boltvault/releases), or use the web wallet at [vault.bolt.co.in](https://vault.bolt.co.in)
 
 ___
 
@@ -38,9 +38,9 @@ ___
 
 The application is broken into a few separate pieces:
 
-- [BananoVault](https://github.com/bananocoin/bananovault) - The main wallet application (UI + Seed Generation/Block Signing/Etc).
-- [BananoVault-Server](https://github.com/bananocoin/bananovault-server) - Serves the Wallet UI and brokers public communication between the wallet and the Banano Node.
-- [BananoVault-WS](https://github.com/bananocoin/bananovault-ws) - Websocket server that receives new blocks from the Banano node and sends them in real time to the wallet ui.
+- [BoltVault](https://github.com/boltlabs/boltvault) - The main wallet application (UI + Seed Generation/Block Signing/Etc).
+- [BoltVault-Server](https://github.com/boltlabs/boltvault-server) - Serves the Wallet UI and brokers public communication between the wallet and the bolt Node.
+- [BoltVault-WS](https://github.com/boltlabs/boltvault-ws) - Websocket server that receives new blocks from the Bolt node and sends them in real time to the wallet UI.
 
 
 # Development Prerequisites
@@ -51,8 +51,8 @@ The application is broken into a few separate pieces:
 # Development Guide
 #### Clone repository and install dependencies
 ```bash
-git clone https://github.com/bananocoin/bananovault
-cd nanovault
+git clone https://github.com/boltlabs/boltvault
+cd boltvault
 npm install
 ```
 
@@ -107,4 +107,4 @@ Special thanks to the following!
 - [dcposch/blakejs](https://github.com/dcposch/blakejs) - Blake2b Implementation
 - [dchest/tweetnacl-js](https://github.com/dchest/tweetnacl-js) - Cryptography Implementation
 
-If you have found BananoVault useful and are feeling generous, you can donate to the creator at `xrb_318syypnqcgdouy3p3ekckwmnmmyk5z3dpyq48phzndrmmspyqdqjymoo8hj`
+If you have found BoltVault useful and are feeling generous, you can donate to the creator at `xrb_318syypnqcgdouy3p3ekckwmnmmyk5z3dpyq48phzndrmmspyqdqjymoo8hj`

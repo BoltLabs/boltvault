@@ -3,7 +3,7 @@ const autoUpdater = require('electron-updater').autoUpdater;
 const url = require('url');
 const path = require('path');
 
-app.setAsDefaultProtocolClient('ban'); // Register handler for xrb: links
+app.setAsDefaultProtocolClient('bolt'); // Register handler for bolt: links
 
 let mainWindow;
 
@@ -11,7 +11,7 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 1000, height: 600, webPreferences: { webSecurity: false } });
   // const options = { extraHeaders: "pragma: no-cache\n" };
-  // mainWindow.loadURL('https://vault.banano.co.in', options);
+  // mainWindow.loadURL('https://vault.bolt.co.in', options);
   // mainWindow.loadURL('http://localhost:4200/');
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'dist/index.html'),
@@ -42,7 +42,7 @@ app.on('ready', () => {
   // Once the app is ready, launch the wallet window
   createWindow();
 
-  // Detect when the application has been loaded using an xrb: link, send it to the wallet to load
+  // Detect when the application has been loaded using an blt: link, send it to the wallet to load
   app.on('open-url', (event, path) => {
     if (!mainWindow) {
       createWindow();
@@ -126,20 +126,20 @@ function getApplicationMenu() {
       submenu: [
         {
           label: 'View GitHub',
-          click () { loadExternal('https://github.com/bananocoin/bananovault') }
+          click () { loadExternal('https://github.com/boltlabs/boltvault') }
         },
         {
           label: 'Submit Issue',
-          click () { loadExternal('https://github.com/bananocoin/bananovault/issues/new') }
+          click () { loadExternal('https://github.com/boltlabs/boltvault/issues/new') }
         },
         {type: 'separator'},
         {
           type: 'normal',
-          label: `BananoVault Version: ${autoUpdater.currentVersion}`,
+          label: `BoltVault Version: ${autoUpdater.currentVersion}`,
         },
         {
           label: 'View Latest Updates',
-          click () { loadExternal('https://github.com/bananocoin/bananovault/releases') }
+          click () { loadExternal('https://github.com/boltlabs/boltvault/releases') }
         },
         {type: 'separator'},
         {
@@ -154,7 +154,7 @@ function getApplicationMenu() {
 
   if (process.platform === 'darwin') {
     template.unshift({
-      label: 'BananoVault',
+      label: 'BoltVault',
       submenu: [
         {role: 'about'},
         {type: 'separator'},

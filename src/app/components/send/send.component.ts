@@ -32,8 +32,8 @@ export class SendComponent implements OnInit {
   addressBookMatch = '';
 
   amounts = [
-    { name: 'BANANO ', shortName: 'BANANO', value: 'ban' },
-    { name: 'banoshi (0.01 Banano)', shortName: 'banoshi', value: 'banoshi' },
+    { name: 'BOLT ', shortName: 'BOLT', value: 'bolt' },
+    { name: 'minibolt (0.01 Bolt)', shortName: 'minibolt', value: 'minibolt' },
   ];
   selectedAmount = this.amounts[0];
 
@@ -87,7 +87,7 @@ export class SendComponent implements OnInit {
     }
   }
 
-  // An update to the Banano amount, sync the fiat value
+  // An update to the Bolt amount, sync the fiat value
   syncFiatPrice() {
     const rawAmount = this.getAmountBaseValue(this.amount || 0).plus(this.amountRaw);
     if (rawAmount.lte(0)) {
@@ -177,8 +177,8 @@ export class SendComponent implements OnInit {
     const nanoAmount = this.rawAmount.div(this.nano);
 
     if (this.amount < 0 || rawAmount.lessThan(0)) return this.notificationService.sendWarning(`Amount is invalid`);
-    if (nanoAmount.lessThan(1)) return this.notificationService.sendWarning(`Transactions for less than 1 banoshi will be ignored by the node.  Send raw amounts with at least 1 banoshi.`);
-    if (from.balanceBN.minus(rawAmount).lessThan(0)) return this.notificationService.sendError(`From account does not have enough BANANO`);
+    if (nanoAmount.lessThan(1)) return this.notificationService.sendWarning(`Transactions for less than 1 minibolt will be ignored by the node.  Send raw amounts with at least 1 minibolt.`);
+    if (from.balanceBN.minus(rawAmount).lessThan(0)) return this.notificationService.sendError(`From account does not have enough BOLT`);
 
     // Determine a proper raw amount to show in the UI, if a decimal was entered
     this.amountRaw = this.rawAmount.mod(this.nano);
@@ -248,8 +248,8 @@ export class SendComponent implements OnInit {
     switch (this.selectedAmount.value) {
       default:
       case 'nano': return this.util.nano.nanoToRaw(value);
-      case 'banoshi': return this.util.nano.banoshiToRaw(value);
-      case 'ban': return this.util.nano.banToRaw(value);
+      case 'minibolt': return this.util.nano.banoshiToRaw(value);
+      case 'bolt': return this.util.nano.banToRaw(value);
     }
   }
 
@@ -257,8 +257,8 @@ export class SendComponent implements OnInit {
     switch (this.selectedAmount.value) {
       default:
       case 'nano': return this.util.nano.rawToNano(value);
-      case 'banoshi': return this.util.nano.rawToBanoshi(value);
-      case 'ban': return this.util.nano.rawToBan(value);
+      case 'minibolt': return this.util.nano.rawToBanoshi(value);
+      case 'bolt': return this.util.nano.rawToBan(value);
     }
   }
 

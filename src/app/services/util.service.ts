@@ -211,14 +211,14 @@ function getPublicAccountID(accountPublicKeyBytes) {
   const checksum = util.uint5.toString(util.uint4.toUint5(util.uint8.toUint4(blake.blake2b(keyBytes, null, 5).reverse())));
   const account = util.uint5.toString(util.uint4.toUint5(util.hex.toUint4(`0${accountHex}`)));
 
-  return `ban_${account}${checksum}`;
+  return `blt_${account}${checksum}`;
 }
 
 function getAccountPublicKey(account) {
-  if ((!account.startsWith('ban_1') && !account.startsWith('ban_3')) || account.length !== 64) throw new Error(`Invalid BANANO Account`);
+  if ((!account.startsWith('blt_1') && !account.startsWith('blt_3')) || account.length !== 64) throw new Error(`Invalid BOLT Account`);
   const account_crop = account.substring(4,64);
   const isValid = /^[13456789abcdefghijkmnopqrstuwxyz]+$/.test(account_crop);
-  if (!isValid) throw new Error(`Invalid BANANO account`);
+  if (!isValid) throw new Error(`Invalid BOLT account`);
 
   const key_uint4 = array_crop(uint5ToUint4(stringToUint5(account_crop.substring(0, 52))));
   const hash_uint4 = uint5ToUint4(stringToUint5(account_crop.substring(52, 60)));
@@ -233,23 +233,23 @@ function getAccountPublicKey(account) {
 /**
  * Conversion functions
  */
-const ban = 100000000000000000000000000000;
-const banoshi = 1000000000000000000000000000;
+const bolt = 100000000000000000000000000000;
+const minibolt = 1000000000000000000000000000;
 const nano  = 1000000000000000000000000;
 function banToRaw(value) {
-  return new BigNumber(value).times(ban);
+  return new BigNumber(value).times(bolt);
 }
 function banoshiToRaw(value) {
-  return new BigNumber(value).times(banoshi);
+  return new BigNumber(value).times(minibolt);
 }
 function nanoToRaw(value) {
   return new BigNumber(value).times(nano);
 }
 function rawToBan(value) {
-  return new BigNumber(value).div(ban);
+  return new BigNumber(value).div(bolt);
 }
 function rawToBanoshi(value) {
-  return new BigNumber(value).div(banoshi);
+  return new BigNumber(value).div(minibolt);
 }
 function rawToNano(value) {
   return new BigNumber(value).div(nano);
