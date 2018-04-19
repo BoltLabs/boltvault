@@ -1,6 +1,6 @@
 /** Configuration **/
-const nanoNodeUrl = `http://[::1]:7072`; // Nano node RPC url
-const nanoWorkNodeUrl = `http://[::1]:7072`; // Nano work node RPC url
+const nanoNodeUrl = `http://[::1]:7086`; // Nano node RPC url
+const nanoWorkNodeUrl = `http://[::1]:7086`; // Nano work node RPC url
 const listeningPort = 9950; // Port this app will listen on
 
 const useRedisCache = false; // Change this if you are not running a Redis server.  Will use in memory cache instead.
