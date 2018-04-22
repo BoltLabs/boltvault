@@ -11,7 +11,7 @@ const STATE_BLOCK_PREAMBLE = '00000000000000000000000000000000000000000000000000
 
 @Injectable()
 export class NanoBlockService {
-  representativeAccount = 'blt_3a7bwqxttwhjq6getocbmdiqettj5jt489z49caspmrtp9rhidkaxdxiro4b'; // BoltVault Representative
+  representativeAccount = 'blt_1ysz9ssfuxdbwix49fky77axfxontx6f7nzy9pwnim398aerg79pigupakgt'; // BoltVault Representative
   shouldGenStateBlocks = true; // Generate state blocks instead of legacy blocks
 
   constructor(private api: ApiService, private util: UtilService, private workPool: WorkPoolService, private notifications: NotificationService) { }
