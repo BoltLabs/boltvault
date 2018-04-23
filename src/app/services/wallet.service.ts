@@ -42,7 +42,7 @@ export interface FullWallet {
 
 @Injectable()
 export class WalletService {
-  nano = 1000000000000000000000000;
+  nano = 10000000000000000;
   storeKey = `nanovault-wallet`;
 
   wallet: FullWallet = {

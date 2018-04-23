@@ -7,9 +7,9 @@ import {AppSettingsService} from "../services/app-settings.service";
 export class RaiPipe implements PipeTransform {
   precision = 6;
 
-  bolt = 100000000000000000000000000000;
-  minibolt = 1000000000000000000000000000;
-  rai  = 1000000000000000000000000;
+  bolt =      10000000000000000;
+  minibolt =  100000000000000;
+  rai  =      1000000000000;
 
   transform(value: any, args?: any): any {
     const opts = args.split(',');

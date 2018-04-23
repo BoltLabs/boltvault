@@ -17,7 +17,7 @@ import BigNumber from "bignumber.js";
   styleUrls: ['./account-details.component.css']
 })
 export class AccountDetailsComponent implements OnInit, OnDestroy {
-  nano = 1000000000000000000000000;
+  nano = 1000000000000;
 
   accountHistory: any[] = [];
   pendingBlocks = [];

@@ -11,6 +11,7 @@ interface AppSettings {
   lockOnClose: number;
   lockInactivityMinutes: number;
   powSource: PoWSource;
+  useStateBlocks: boolean;
 }
 
 @Injectable()
@@ -21,9 +22,10 @@ export class AppSettingsService {
     displayDenomination: 'bolt',
     walletStore: 'localStorage',
     displayCurrency: 'USD',
-    lockOnClose: 1,
-    lockInactivityMinutes: 30,
+    lockOnClose: 0,
+    lockInactivityMinutes: 120,
     powSource: 'best',
+    useStateBlocks: false,
   };
 
   constructor() { }
@@ -67,9 +69,10 @@ export class AppSettingsService {
       displayDenomination: 'bolt',
       walletStore: 'localStorage',
       displayCurrency: 'USD',
-      lockOnClose: 1,
-      lockInactivityMinutes: 30,
+      lockOnClose: 0,
+      lockInactivityMinutes: 120,
       powSource: 'best',
+      useStateBlocks: false,
     };
   }
 

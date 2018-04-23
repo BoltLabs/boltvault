@@ -233,9 +233,9 @@ function getAccountPublicKey(account) {
 /**
  * Conversion functions
  */
-const bolt = 100000000000000000000000000000;
-const minibolt = 1000000000000000000000000000;
-const nano  = 1000000000000000000000000;
+const bolt =      10000000000000000;
+const minibolt =  100000000000000;
+const nano  =     1000000000000;
 function banToRaw(value) {
   return new BigNumber(value).times(bolt);
 }
