@@ -7,7 +7,7 @@ export class PriceService {
   apiUrl = `https://api.coinmarketcap.com/v1/`;
 
   price = {
-    lastPrice: 0.01,
+    lastPrice: 0.1,
     lastPriceBTC: 0.0,
   };
   lastPrice$ = new BehaviorSubject(1);
