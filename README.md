@@ -1,7 +1,7 @@
 # BoltVault
 
 BoltVault is a fully client-side signing wallet for sending and receiving [Bolt](https://github.com/boltlabs/boltvault)
-on your [desktop](https://github.com/boltlabs/boltvault/releases) or [in your browser](https://vault.bolt.co.in)
+on your [desktop](https://github.com/boltlabs/boltvault/releases) or [in your browser](http://wallet.bolt.bz)
 
 ![BoltVault Screenshot](https://i.imgur.com/DWlPQdM.png)
 ___
@@ -22,7 +22,7 @@ You can also use BoltVault from any device on the web at [vault.bolt.co.in](http
 
 
 # Bugs/Feedback
-If you run into any issues, please use the [GitHub Issue Tracker](https://github.com/boltlabs/boltvault/issues) or head over to our [Discord Server](https://discord.gg/SBPaSBS)!  
+If you run into any issues, please use the [GitHub Issue Tracker](https://github.com/boltlabs/boltvault/issues) or head over to our [Discord Server](https://discord.gg/C9VRysG)!  
 We are continually improving and adding new features based on the feedback you provide, so please let your opinions be known!
 
 To get an idea of some of the things that are planned for the near future, check out the [Road Map](https://github.com/boltlabs/boltvault/wiki/Road-Map).
@@ -30,7 +30,7 @@ To get an idea of some of the things that are planned for the near future, check
 ___
 
 #### Everything below is only for contributing to the development of BoltVault
-#### To download BoltVault go to the [releases section](https://github.com/boltlabs/boltvault/releases), or use the web wallet at [vault.bolt.co.in](https://vault.bolt.co.in)
+#### To download BoltVault go to the [releases section](https://github.com/boltlabs/boltvault/releases), or use the web wallet at [vault.bolt.co.in](https://wallet.bolt.bz)
 
 ___
 
