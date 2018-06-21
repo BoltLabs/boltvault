@@ -18,7 +18,7 @@ ___
 # Install BoltVault
 BoltVault is available on your desktop (Windows/Mac/Linux) - just head over to the [releases section](https://github.com/boltlabs/boltvault/releases) and download the latest version for your OS.
 
-You can also use BoltVault from any device on the web at [vault.bolt.co.in](https://vault.bolt.co.in)
+You can also use BoltVault from any device on the web at [wallet.bolt.bz](http://wallet.bolt.bz)
 
 
 # Bugs/Feedback
@@ -30,7 +30,7 @@ To get an idea of some of the things that are planned for the near future, check
 ___
 
 #### Everything below is only for contributing to the development of BoltVault
-#### To download BoltVault go to the [releases section](https://github.com/boltlabs/boltvault/releases), or use the web wallet at [vault.bolt.co.in](https://wallet.bolt.bz)
+#### To download BoltVault go to the [releases section](https://github.com/boltlabs/boltvault/releases), or use the web wallet at [wallet.bolt.bz](https://wallet.bolt.bz)
 
 ___
 
