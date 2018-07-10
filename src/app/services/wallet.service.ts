@@ -191,7 +191,7 @@ export class WalletService {
     const exportData = this.generateExportData();
     const base64Data = btoa(JSON.stringify(exportData));
 
-    return `http://peer.boltnode.org:9950/import-wallet#${base64Data}`;
+    return `https://wallet.bolt.bz/import-wallet#${base64Data}`;
   }
 
   lockWallet() {
