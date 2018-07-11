@@ -25,7 +25,7 @@ export class WebsocketService {
   connect() {
     if (this.socket.connected && this.socket.ws) return;
     delete this.socket.ws; // Maybe this will erase old connections
-    const ws = new WebSocket('ws://peer.boltnode.org:3333');
+    const ws = new WebSocket('wss://peer.boltnode.org:3333');
     this.socket.ws = ws;
 
     ws.onopen = event => {
